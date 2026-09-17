@@ -4,7 +4,7 @@ Eine Liste, ein Ort. Jede Frage steht mit der Phase, ab der sie blockiert, und
 mit einer Empfehlung, wo Claude eine hat. Erledigte Punkte wandern nach unten
 in „Entschieden", mit Datum und Antwort.
 
-Stand: 2026-09-18 (Phase 0 → 1)
+Stand: 2026-09-18 (Phase 1 abgeschlossen)
 
 ---
 
@@ -27,7 +27,7 @@ _(keine — alle Phase-0-Fragen sind entschieden)_
 | # | Frage | Empfehlung | Wer |
 |---|---|---|---|
 | C1 | **Markenname** — bis dahin überall `[MARKENNAME]`. | Nicht blockierend: ein Find-and-Replace am Ende. | Willy |
-| C2 | Ist „**über 20.000 Entwickler weltweit**" belegbar? | Claude prüft in Phase 1/3 auf odoo.com; falls nicht belegbar, Formulierung ohne Zahl. | Claude → Willy |
+| C2 | „**über 20.000 Entwickler weltweit**" — geprüft 18.09.2026 auf odoo.com: die Community-Seite sagt wörtlich „20,000+ **people contribute** to the success of Odoo" (Mitwirkende, nicht Entwickler); die Startseite sagt „100k+ developers", „40k+ community apps", „28 million users". Details in `marktanalyse.md` §3. | Willy wählt: (a) „über 20.000 Mitwirkende weltweit" (exakt belegt) oder (b) „laut Odoo über 100.000 Entwickler weltweit" (Odoos eigene Startseitenzahl). Claude nimmt bis zur Entscheidung (a). „Tausende Add-ons" ist belegt (40k+). | Willy |
 
 ## D. Blockiert ab **Phase 5** (Build) — jetzt nur Platzhalter
 

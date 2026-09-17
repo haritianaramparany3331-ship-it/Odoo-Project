@@ -44,3 +44,31 @@ One block per session. A fresh session should be able to continue from
 - Deploy verification: needs the GitHub repo + Vercel connection (no `gh` /
   `vercel` CLI on this machine; push needs approval anyway — CLAUDE.md §12).
 - `docs/offene-fragen.md` A1–A3.
+
+---
+
+## Session 2 — 2026-09-18 — Phase 0 close-out + Phase 1 (Marktanalyse)
+
+**Finished**
+- A1 (build step) and A3 (2-key vercel.json) approved; CLAUDE.md §7 reconciled
+  and `[x]` ticked; decisions logged in `docs/offene-fragen.md`.
+- GitHub remote added (`haritianaramparany3331-ship-it/Odoo-Project`), push
+  approved by Hari, `main` pushed. **Vercel import + deployed-placeholder check
+  still open** (needs Hari's Vercel project; then verify status/noindex/fonts).
+- Phase 1 research done and written to `docs/marktanalyse.md`: partner
+  population DE/AT/CH from odoo.com, 7 homepages captured in headless Chromium
+  (screenshots + structured extraction), local Rhein-Main check (HAV Media
+  Kassel/Silver, cloudition, regional landing pages of non-local firms),
+  synthesis (patterns, keep/break, the gap), word counts measured.
+- "über 20.000 Entwickler" traced on odoo.com → "20,000+ people contribute";
+  decision for Willy in offene-fragen C2.
+- `docs/ki-recherche.md` Punkt 1 bullets written.
+
+**Next**
+- STOP: Hari reviews the synthesis. Then Phase 2 (Informationsarchitektur):
+  funnel, Referenzen/Über-uns decision (B1), industry shortlist (B4), content
+  blocks + word budgets, ASCII wireframes.
+- Vercel: once the project exists, verify the deployed placeholder.
+
+**Blocked**
+- Vercel project URL (Hari). C2 wording (Willy) — not blocking Phase 2.
