@@ -31,7 +31,19 @@ _(folgt in Phase 7)_
 
 ## Punkt 2 — Informationsarchitektur & Wireframing
 
-_(Stichpunkte, folgt)_
+- **Funnel aus Beobachtung, nicht aus Lehrbuch:** jede Funnel-Stufe wurde aus
+  dem abgeleitet, was die sieben Wettbewerber-Seiten an derselben Stelle tun —
+  und aus dem, was sie dort auslassen (Kundensituation, Software, modularer
+  Einstieg, KI als Angebot).
+- **Branchen-Shortlist datengestützt:** Schnittmenge aus den Branchen, die die
+  Wettbewerber nennen, und den Branchen, in denen KIBH nachweislich gearbeitet
+  hat (Claude hat dafür die KIBH-Referenzseiten im Nachbarprojekt ausgelesen).
+- **Wortbudgets gerechnet, nicht geschätzt:** 200 Wörter/min als Basis, Block
+  für Block budgetiert, damit die 2–3-Minuten-Vorgabe schon in der Struktur
+  eingehalten wird — nicht erst beim Kürzen fertiger Texte.
+- **Regelabgleich eingebaut:** jeder Block trägt den Pain Point und die
+  Odoo-Stärke aus dem Briefing (O1–O5), damit in Phase 3 keine Aussage ohne
+  Herkunft entsteht.
 
 ## Punkt 3 — Content-Strategie
 

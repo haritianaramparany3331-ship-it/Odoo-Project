@@ -64,11 +64,23 @@ One block per session. A fresh session should be able to continue from
   decision for Willy in offene-fragen C2.
 - `docs/ki-recherche.md` Punkt 1 bullets written.
 
+**Later the same day**
+- Phase 1 synthesis approved. Vercel project connected by Hari:
+  `https://odoo-project-topaz.vercel.app/` — verified with curl: `/` 200,
+  CSS + woff2 200, custom 404 with status 404 and root-absolute CSS, robots
+  `Disallow: /` + `noindex` meta (review build), no sitemap by design. Doc
+  commits pushed (approved).
+- **Phase 2 written:** `docs/informationsarchitektur.md` — funnel (7 steps
+  with "what must be true"), 5-page structure (B1 proposal: one "Über uns"
+  page with Referenzen anchor), 4-industry shortlist (B4 proposal, grounded in
+  Phase 1 + KIBH's real references), content blocks per page with pain point /
+  Odoo strength / word budget, ASCII wireframes, CTA placement rule (header +
+  one end band; Startseite also hero). New open items F1–F3.
+
 **Next**
-- STOP: Hari reviews the synthesis. Then Phase 2 (Informationsarchitektur):
-  funnel, Referenzen/Über-uns decision (B1), industry shortlist (B4), content
-  blocks + word budgets, ASCII wireframes.
-- Vercel: once the project exists, verify the deployed placeholder.
+- STOP: Hari approves the structure (B1, B4 + F1–F3 to Willy). Then Phase 3:
+  `seo-keywords.md` + all copy in `content.md`.
 
 **Blocked**
-- Vercel project URL (Hari). C2 wording (Willy) — not blocking Phase 2.
+- B1/B4 confirmation (Hari), F1–F3 + C2 (Willy) — copy can start with
+  placeholders for F2/F3.

@@ -4,7 +4,7 @@ Eine Liste, ein Ort. Jede Frage steht mit der Phase, ab der sie blockiert, und
 mit einer Empfehlung, wo Claude eine hat. Erledigte Punkte wandern nach unten
 in „Entschieden", mit Datum und Antwort.
 
-Stand: 2026-09-18 (Phase 1 abgeschlossen)
+Stand: 2026-09-18 (Phase 2 — Vorschlag liegt vor)
 
 ---
 
@@ -16,11 +16,19 @@ _(keine — alle Phase-0-Fragen sind entschieden)_
 
 | # | Frage | Empfehlung | Wer |
 |---|---|---|---|
-| B1 | **„Referenzen / Über uns & KI-Hebel"** — eine Seite oder zwei? | Vorschlag folgt in Phase 2 nach der Wettbewerbsanalyse. | Hari |
+| B1 | **„Referenzen / Über uns & KI-Hebel"** — eine Seite oder zwei? | **Vorschlag (informationsarchitektur.md §0): eine Seite „Über uns"** mit Referenzen-Block als Anker; wird eigene Seite, sobald ≥ 3 echte ERP-Referenzen existieren. → 5 Kernseiten. | Hari |
 | B2 | Gibt es **echte Odoo/ERP-Referenzkunden**? Falls nein: wie soll die Referenzen-Seite zum Launch aussehen (Platzhalter-Struktur, oder Seite vorerst weglassen)? | Struktur bauen, Platzhalter zeigen — Entscheidung nach Phase 1 (dort sehen wir, wie Wettbewerber ohne viele Referenzen arbeiten). | Willy |
 | B3 | Dürfen **KIBH-KI-Referenzen** hier erscheinen — und mit welcher Einordnung? (Es sind KI-Projekte, keine ERP-Projekte.) | Nur mit klarer Kennzeichnung als KI-Projekte, z. B. im Block „KI-Hebel". | Willy |
-| B4 | **Branchenfokus:** welche Branchen? | Shortlist folgt in Phase 2 (aus Wettbewerbsrecherche + KIBH-Branchen). | Willy |
-| B5 | **ROI-Rechner** — gewünscht oder nicht? Er bräuchte echte Zahlen (Stundensätze, Zeitersparnis pro Modul), die niemand erfinden darf. | Nicht bauen, bis reale Eingabewerte vorliegen. Alternative: „Potenzialgespräch" als CTA trägt denselben Zweck ohne Zahlen. | Willy |
+| B4 | **Branchenfokus:** welche Branchen? | **Vorschlag: vier** — Bau & Handwerk · Produktion & Lebensmittelhandwerk · Handel & E-Commerce · Dienstleistung, Beratung & Agenturen (Herleitung in informationsarchitektur.md §0). Pflege/Sozialwirtschaft bewusst nicht (regulierte Abrechnung, nicht belegbar). | Willy |
+| B5 | **ROI-Rechner** — gewünscht oder nicht? | **Empfehlung: nicht bauen.** Er bräuchte Ersparniswerte, die niemand erfinden darf (§4). Der CTA „Potenzialgespräch" trägt den Zweck. | Willy |
+
+## F. Aus Phase 2 entstanden — für Phase 3 (Copy) gebraucht
+
+| # | Frage | Empfehlung | Wer |
+|---|---|---|---|
+| F1 | **Footer-Link zur KIBH-Seite** („KI-Beratung: kiberatunghessen.com") — ja/nein? | Ja: zeigt die gewachsene Firma hinter dem neuen Geschäftsfeld, SEO-Verknüpfung in beide Richtungen. | Willy |
+| F2 | **Das Potenzialgespräch konkret:** Dauer, Format (Video/vor Ort), Teilnehmer, was der Kunde danach in der Hand hat (z. B. schriftliche Einschätzung?). | Bis dahin `[PLATZHALTER: Dauer/Format]` im CTA-Band und auf /kontakt/. Ohne diese Angaben bleibt der wichtigste CTA vage. | Willy |
+| F3 | **Regionale Aussage** in Texten und SEO: „aus Hessen für den Mittelstand in Deutschland" (Vorschlag) — oder nur Hessen/Rhein-Main, oder DACH? | Vorschlag wie genannt; passt zu den Keywords des Briefings („… Deutschland", „… Hessen"). | Willy |
 
 ## C. Blockiert ab **Phase 3** (Content)
 
@@ -61,4 +69,5 @@ _(noch keine)_
 |---|---|---|
 | 2026-09-18 | A1 Shared Components | **Build-Schritt** (`build.js` + `src/partials/`). CLAUDE.md §7 entsprechend angepasst. |
 | 2026-09-18 | A3 `vercel.json` | **OK** — nur `buildCommand` + `outputDirectory`, sonst nichts. |
+| 2026-09-18 | Vercel | Projekt verbunden, Deploy geprüft: `https://odoo-project-topaz.vercel.app/` (200, 404-Seite, noindex, Fonts). Review-URL, kein Endhost. |
 | 2026-09-18 | A2 GitHub-Repo | `https://github.com/haritianaramparany3331-ship-it/Odoo-Project` (Haris Account, wie KIBH). Push nur nach Freigabe. |
