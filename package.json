@@ -1,0 +1,11 @@
+{
+  "name": "odoo-erp-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "[MARKENNAME] — Website Digitalisierung / ERP-Systemhaus (Odoo). Static HTML/CSS/JS, zero dependencies.",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node serve.js",
+    "dev": "node build.js && node serve.js"
+  }
+}

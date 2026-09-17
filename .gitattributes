@@ -1,0 +1,7 @@
+# Keep LF in the working copy on every machine so the build hash is identical locally and on Vercel.
+* text=auto eol=lf
+*.woff2 binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary

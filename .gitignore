@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vercel
+tests/screenshots/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.local
+.DS_Store
+Thumbs.db
+
+# Personal Claude Code settings stay local
+.claude/settings.local.json

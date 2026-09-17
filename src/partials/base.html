@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+{{robots_meta}}
+{{head_urls}}
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="{{siteName}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Self-hosted Mulish (CLAUDE.md §10). Preloading the latin file avoids a
+     flash of fallback type on every heading of the first paint. -->
+<link rel="preload" href="{{root}}assets/fonts/mulish-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{root}}assets/css/main.css?v={{v}}">
+<!-- Favicon: placeholder until the wordmark exists (docs/bildbedarf.md). -->
+<link rel="icon" href="{{root}}assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body class="{{bodyClass}}">
+<a class="skip-link" href="#content">Zum Inhalt springen</a>
+{{> header}}
+<main id="content">
+{{content}}
+</main>
+{{> footer}}
+<script src="{{root}}assets/js/main.js?v={{v}}" defer></script>
+</body>
+</html>
