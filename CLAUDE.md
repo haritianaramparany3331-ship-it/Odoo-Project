@@ -348,7 +348,7 @@ Every page is checked against these before it's considered done:
   (approved 2026-09-18 — buildCommand + outputDirectory only, nothing else may
   be added to it). (The KIBH project's first deploy failed on a wrong root
   directory — don't repeat it.)
-- GitHub repo: `[AUSFÜLLEN]`
+- GitHub repo: `https://github.com/haritianaramparany3331-ship-it/Odoo-Project`
 
 ### Shared components — one source, not copy-paste
 
@@ -554,7 +554,7 @@ not anecdotes.
 
 - [ ] **Brand/site name** for the ERP business field — until then `[MARKENNAME]`
 - [ ] **Domain** for the new site
-- [ ] **GitHub repo** URL
+- [x] **GitHub repo** URL — `haritianaramparany3331-ship-it/Odoo-Project` (2026-09-18)
 - [ ] **Final host** after the Vercel review phase (IONOS, Hostinger, Vercel Pro …)
       — not blocking now, but decide before go-live
 - [x] **Shared components**: minimal build step (decided 2026-09-18, §7)

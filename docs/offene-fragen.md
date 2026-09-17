@@ -10,9 +10,7 @@ Stand: 2026-09-18 (Phase 0 → 1)
 
 ## A. Blockiert **jetzt** (vor Phase 1)
 
-| # | Frage | Empfehlung von Claude | Wer |
-|---|---|---|---|
-| A2 | **GitHub-Repo-URL** fehlt noch (Antwort vom 2026-09-18 kam ohne URL an). Vercel-Projekt: Root Directory = Repo-Root, Build Command `node build.js`, Output Directory `dist`. | Sobald die URL da ist: `git remote add`, Push nach Freigabe, Deploy mit der Platzhalterseite prüfen. Blockiert Phase 1 nicht. | Hari |
+_(keine — alle Phase-0-Fragen sind entschieden)_
 
 ## B. Blockiert ab **Phase 2** (Informationsarchitektur)
 
@@ -63,3 +61,4 @@ _(noch keine)_
 |---|---|---|
 | 2026-09-18 | A1 Shared Components | **Build-Schritt** (`build.js` + `src/partials/`). CLAUDE.md §7 entsprechend angepasst. |
 | 2026-09-18 | A3 `vercel.json` | **OK** — nur `buildCommand` + `outputDirectory`, sonst nichts. |
+| 2026-09-18 | A2 GitHub-Repo | `https://github.com/haritianaramparany3331-ship-it/Odoo-Project` (Haris Account, wie KIBH). Push nur nach Freigabe. |
