@@ -25,7 +25,7 @@ One block per session. A fresh session should be able to continue from
   switch → canonical/og:url/sitemap/robots derive from it), `serve.js`,
   `package.json` (zero deps), `vercel.json` (buildCommand + outputDirectory
   only — pending Hari's OK, see offene-fragen A3), `.gitignore`,
-  `.claude/settings.local.json` (ask before `git push`).
+  `.claude/settings.json` (project-wide: ask before `git push`), `.gitattributes` (LF everywhere).
 - `assets/css/main.css`: tokens on `:root`, German wrapping rules global from
   line 1, base reset, container/section/button utilities, minimal header/footer.
 - Placeholder Startseite + 404 page built and checked in headless Chromium:
