@@ -120,6 +120,10 @@ function build() {
 
   const built = [];
   const sitemap = [];
+  // Go-live guard (docs/platzhalter.md): every remaining placeholder token is
+  // counted per page and printed after the build, so nothing is forgotten.
+  const tokens = { "[PLATZHALTER": 0, "[MARKENNAME]": 0 };
+  const perPage = [];
 
   for (const file of pages) {
     const slug = path.basename(file, ".html");
@@ -162,6 +166,13 @@ function build() {
     fs.writeFileSync(dest, html);
     built.push(out.replace(/\\/g, "/"));
     if (slug !== "404" && !meta.noindex) sitemap.push(url);
+
+    const count = (needle) => html.split(needle).length - 1;
+    const ph = count("[PLATZHALTER");
+    const mn = count("[MARKENNAME]");
+    tokens["[PLATZHALTER"] += ph;
+    tokens["[MARKENNAME]"] += mn;
+    perPage.push({ page: built[built.length - 1], ph, mn });
   }
 
   // robots.txt + sitemap.xml: disallow everything while the site is a review
@@ -182,6 +193,15 @@ function build() {
 
   console.log(`Built ${built.length} pages (${indexable ? "indexable" : "noindex — review build"}):`);
   for (const b of built.sort()) console.log(`  dist/${b}`);
+
+  console.log("\nPlatzhalter (docs/platzhalter.md):");
+  for (const r of perPage.sort((a, b) => a.page.localeCompare(b.page))) {
+    console.log(`  ${r.page.padEnd(28)} [PLATZHALTER] ${String(r.ph).padStart(3)}   [MARKENNAME] ${String(r.mn).padStart(3)}`);
+  }
+  const open = tokens["[PLATZHALTER"] + tokens["[MARKENNAME]"];
+  console.log(open === 0
+    ? "  -> 0 offene Platzhalter: Go-live-fähig."
+    : `  -> ${tokens["[PLATZHALTER"]} Platzhalter + ${tokens["[MARKENNAME]"]}x [MARKENNAME] offen — nicht Go-live-fähig.`);
 }
 
 build();
