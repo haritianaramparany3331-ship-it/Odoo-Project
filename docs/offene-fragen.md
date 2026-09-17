@@ -4,7 +4,7 @@ Eine Liste, ein Ort. Jede Frage steht mit der Phase, ab der sie blockiert, und
 mit einer Empfehlung, wo Claude eine hat. Erledigte Punkte wandern nach unten
 in „Entschieden", mit Datum und Antwort.
 
-Stand: 2026-09-18 (Phase 2 — Vorschlag liegt vor)
+Stand: 2026-09-18 (Phase 3 — Texte liegen zur Freigabe vor)
 
 ---
 
@@ -16,10 +16,8 @@ _(keine — alle Phase-0-Fragen sind entschieden)_
 
 | # | Frage | Empfehlung | Wer |
 |---|---|---|---|
-| B1 | **„Referenzen / Über uns & KI-Hebel"** — eine Seite oder zwei? | **Vorschlag (informationsarchitektur.md §0): eine Seite „Über uns"** mit Referenzen-Block als Anker; wird eigene Seite, sobald ≥ 3 echte ERP-Referenzen existieren. → 5 Kernseiten. | Hari |
 | B2 | Gibt es **echte Odoo/ERP-Referenzkunden**? Falls nein: wie soll die Referenzen-Seite zum Launch aussehen (Platzhalter-Struktur, oder Seite vorerst weglassen)? | Struktur bauen, Platzhalter zeigen — Entscheidung nach Phase 1 (dort sehen wir, wie Wettbewerber ohne viele Referenzen arbeiten). | Willy |
 | B3 | Dürfen **KIBH-KI-Referenzen** hier erscheinen — und mit welcher Einordnung? (Es sind KI-Projekte, keine ERP-Projekte.) | Nur mit klarer Kennzeichnung als KI-Projekte, z. B. im Block „KI-Hebel". | Willy |
-| B4 | **Branchenfokus:** welche Branchen? | **Vorschlag: vier** — Bau & Handwerk · Produktion & Lebensmittelhandwerk · Handel & E-Commerce · Dienstleistung, Beratung & Agenturen (Herleitung in informationsarchitektur.md §0). Pflege/Sozialwirtschaft bewusst nicht (regulierte Abrechnung, nicht belegbar). | Willy |
 | B5 | **ROI-Rechner** — gewünscht oder nicht? | **Empfehlung: nicht bauen.** Er bräuchte Ersparniswerte, die niemand erfinden darf (§4). Der CTA „Potenzialgespräch" trägt den Zweck. | Willy |
 
 ## F. Aus Phase 2 entstanden — für Phase 3 (Copy) gebraucht
@@ -57,9 +55,9 @@ _(keine — alle Phase-0-Fragen sind entschieden)_
 
 ---
 
-## Platzhalter im Content (werden ab Phase 3 hier gesammelt)
+## Platzhalter im Content
 
-_(noch keine)_
+**Eine Liste, ein Ort:** alle Platzhalter stehen mit Nummer, Fundstelle und Bedarf in `platzhalter.md` (PH-01 … PH-20). Diese Datei hier hält nur die Entscheidungsfragen; die Fragen B2/B3/C2/D1–D5/E1/F1–F3 entsprechen dort PH-08/PH-18/PH-11–PH-16/PH-02/PH-19/PH-03/PH-17.
 
 ---
 
@@ -67,6 +65,8 @@ _(noch keine)_
 
 | Datum | Frage | Entscheidung |
 |---|---|---|
+| 2026-09-18 | B1 Referenzen/Über uns | **Eine Seite „Über uns"** mit Referenzen-Anker (Phase 2 freigegeben). |
+| 2026-09-18 | B4 Branchen | **Vier:** Bau & Handwerk · Produktion & Lebensmittelhandwerk · Handel & E-Commerce · Dienstleistung, Beratung & Agenturen (Phase 2 freigegeben). |
 | 2026-09-18 | A1 Shared Components | **Build-Schritt** (`build.js` + `src/partials/`). CLAUDE.md §7 entsprechend angepasst. |
 | 2026-09-18 | A3 `vercel.json` | **OK** — nur `buildCommand` + `outputDirectory`, sonst nichts. |
 | 2026-09-18 | Vercel | Projekt verbunden, Deploy geprüft: `https://odoo-project-topaz.vercel.app/` (200, 404-Seite, noindex, Fonts). Review-URL, kein Endhost. |

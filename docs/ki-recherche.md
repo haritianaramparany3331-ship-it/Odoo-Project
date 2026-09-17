@@ -47,7 +47,21 @@ _(folgt in Phase 7)_
 
 ## Punkt 3 — Content-Strategie
 
-_(Stichpunkte, folgt)_
+- **Keywords aus Beobachtung statt aus dem Tool:** ohne Zugang zu
+  Suchvolumen-Daten hat Claude die Cluster aus den Briefing-Beispielen, den
+  Title/H1-Mustern der sieben Wettbewerber und Odoos Modulnamen gebildet und nach
+  Suchintention auf die fünf Seiten verteilt — Volumen bewusst nicht geraten,
+  Validierung über die Search Console nach Go-live.
+- **Jede Faktenaussage mit Herkunft:** unter jedem Textblock steht die Quelle
+  (Willys Angaben oder eine odoo.com-Seite). Wo etwas nicht belegbar war
+  („GoBD-zertifiziert"), hat Claude die Odoo-Dokumentation direkt gelesen und
+  die Aussage entsprechend eingegrenzt.
+- **Platzhalter mit Nummern:** jede Lücke, die echte Firmendaten braucht, hat
+  eine feste Nummer (PH-01 … PH-20) im Text und im Register `platzhalter.md`;
+  der Build zählt die offenen Platzhalter je Seite.
+- **Wortzahlen per Skript:** `tools/wordcount.py` zählt den sichtbaren Text je
+  Seite und prüft Hero ≤ 50 Wörter und die Seitenbudgets — Kürzen statt Limits
+  anheben.
 
 ## Punkt 4 — Design & Conversion-Optimierung
 

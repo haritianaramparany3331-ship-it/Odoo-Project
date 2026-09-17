@@ -77,10 +77,23 @@ One block per session. A fresh session should be able to continue from
   Odoo strength / word budget, ASCII wireframes, CTA placement rule (header +
   one end band; Startseite also hero). New open items F1–F3.
 
+**Phase 2 approved, Phase 3 written (same day)**
+- `docs/platzhalter.md`: the single placeholder register (PH-01 … PH-20) Hari
+  asked for; `build.js` now prints open placeholders per page after each build.
+- `docs/seo-keywords.md`: clusters by intent → page, title/meta per page, no
+  invented volumes (validation plan instead).
+- `docs/content.md`: all copy for 5 pages + header/footer + legal structure +
+  404, every claim with a source note, placeholders as PH-nn. Word counts via
+  `tools/wordcount.py`: Startseite 436 · Leistungen 600 · Branchen 356 · Über
+  uns 306 · Kontakt 197; heroes 23–39 words.
+- Verified on odoo.com docs: DATEV export + ELSTER UStVA (Enterprise reporting
+  modules); GoBD applies to the taxpayer, Odoo provides the means (GoBD export)
+  — copy says exactly that, no "GoBD-konform" claim.
+
 **Next**
-- STOP: Hari approves the structure (B1, B4 + F1–F3 to Willy). Then Phase 3:
-  `seo-keywords.md` + all copy in `content.md`.
+- STOP: Willy reviews `content.md` (+ PH-03, PH-17–PH-20 decisions). Then
+  Phase 4 (design concept + self-critique), then Phase 5 build.
 
 **Blocked**
-- B1/B4 confirmation (Hari), F1–F3 + C2 (Willy) — copy can start with
-  placeholders for F2/F3.
+- Text approval (Willy). PH-03 (Potenzialgespräch details) is the one that
+  changes the most copy.
