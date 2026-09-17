@@ -330,7 +330,10 @@ Every page is checked against these before it's considered done:
 
 - **Static HTML / CSS / JS. No framework.** (Same as the KIBH project — proven,
   and the point of the case study is that this stack is enough.)
-- No build step.
+- **No framework build** — no bundler, no transpiler, no npm dependencies. The
+  only build is `node build.js`, a zero-dependency script that assembles
+  `src/pages/` + `src/partials/` into `dist/`, a plain folder of static files
+  (decided 2026-09-18, see "Shared components" below).
 - Deployment: **Vercel temporarily**, so Willy can review the site via a link.
   Once the site is finished it moves to a paid host (same plan as the KIBH site) —
   Vercel's free Hobby tier prohibits commercial use, so it is a review environment
@@ -340,9 +343,11 @@ Every page is checked against these before it's considered done:
   optimisation, no Vercel analytics). A plain folder of static files should be
   uploadable to any host without changes. If you ever think a Vercel-specific
   feature is needed, ask first.
-  Vercel config: root directory = repo root; output directory = `.`; no build
-  command. (The KIBH project's first deploy failed on exactly this — don't repeat
-  it.)
+  Vercel config: root directory = repo root; build command = `node build.js`;
+  output directory = `dist`. Both values also live in the 2-key `vercel.json`
+  (approved 2026-09-18 — buildCommand + outputDirectory only, nothing else may
+  be added to it). (The KIBH project's first deploy failed on a wrong root
+  directory — don't repeat it.)
 - GitHub repo: `[AUSFÜLLEN]`
 
 ### Shared components — one source, not copy-paste
@@ -351,13 +356,11 @@ On the KIBH project the same card markup was duplicated across two pages, so eve
 change had to be made twice and the two copies drifted apart. Decide up front how
 header, footer, nav and repeated card/section blocks are kept in sync:
 
-- either a **minimal build step** (a small Node script that assembles pages from
-  partials), or
-- **plain duplicated HTML plus a documented list** in `docs/` of every block that
-  exists more than once and where
-
-Propose which, and let Hari choose. Whichever it is: when you change a shared
-block, change **every** instance in the same pass.
+**Decided 2026-09-18: the minimal build step** (`build.js`, adapted from KIBH).
+Header, footer and every block that appears on more than one page live exactly
+once in `src/partials/` and are pulled in with `{{> name}}`. Rule: a block used
+on two pages is never pasted twice — it becomes a partial. Changing a shared
+block therefore changes every instance by construction.
 - Keep CSS organized with custom properties on `:root`; watch selector specificity,
   especially section padding/margins cancelling each other out.
 
@@ -554,7 +557,7 @@ not anecdotes.
 - [ ] **GitHub repo** URL
 - [ ] **Final host** after the Vercel review phase (IONOS, Hostinger, Vercel Pro …)
       — not blocking now, but decide before go-live
-- [ ] **Shared components**: minimal build step or documented duplication? (§7)
+- [x] **Shared components**: minimal build step (decided 2026-09-18, §7)
 - [ ] Is **"Referenzen / Über uns & KI-Hebel"** one page or two?
 - [ ] Are there **real ERP/Odoo reference customers** yet? If not, how should the
       Referenzen page be handled at launch?

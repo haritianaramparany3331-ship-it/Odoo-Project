@@ -4,7 +4,7 @@ Eine Liste, ein Ort. Jede Frage steht mit der Phase, ab der sie blockiert, und
 mit einer Empfehlung, wo Claude eine hat. Erledigte Punkte wandern nach unten
 in „Entschieden", mit Datum und Antwort.
 
-Stand: 2026-09-17 (Phase 0)
+Stand: 2026-09-18 (Phase 0 → 1)
 
 ---
 
@@ -12,9 +12,7 @@ Stand: 2026-09-17 (Phase 0)
 
 | # | Frage | Empfehlung von Claude | Wer |
 |---|---|---|---|
-| A1 | **Shared Components:** minimaler Build-Schritt (`build.js` + `src/partials/`, wie bei KIBH) oder reine HTML-Duplikation mit dokumentierter Liste? | **Build-Schritt.** Null Abhängigkeiten, ein Node-Skript, bewährt auf KIBH. Header/Footer/CTA-Band existieren genau einmal. Ausgabe ist ein reiner Ordner statischer Dateien (`dist/`), der auf jeden Host passt. | Hari |
-| A2 | **GitHub-Repo anlegen** und mit Vercel verbinden (Root Directory = Repo-Root, Build Command `node build.js`, Output Directory `dist`). Auf welchem Account — Haris (wie KIBH) oder ein Firmen-Account (CLAUDE.md §16.12)? | Firmen-Account, falls vorhanden; sonst Haris wie bei KIBH, mit Umzug vor Go-live. | Hari |
-| A3 | Darf eine **2-Zeilen-`vercel.json`** (nur `buildCommand` + `outputDirectory`, keine Rewrites/Header/Functions) ins Repo, damit der Deploy reproduzierbar ist statt in Dashboard-Klicks zu leben? | Ja — es ist Konfiguration, kein Vercel-Feature; der Endhost ignoriert die Datei. Alternative: dieselben zwei Werte im Vercel-Dashboard setzen. | Hari |
+| A2 | **GitHub-Repo-URL** fehlt noch (Antwort vom 2026-09-18 kam ohne URL an). Vercel-Projekt: Root Directory = Repo-Root, Build Command `node build.js`, Output Directory `dist`. | Sobald die URL da ist: `git remote add`, Push nach Freigabe, Deploy mit der Platzhalterseite prüfen. Blockiert Phase 1 nicht. | Hari |
 
 ## B. Blockiert ab **Phase 2** (Informationsarchitektur)
 
@@ -61,4 +59,7 @@ _(noch keine)_
 
 ## Entschieden
 
-_(noch nichts)_
+| Datum | Frage | Entscheidung |
+|---|---|---|
+| 2026-09-18 | A1 Shared Components | **Build-Schritt** (`build.js` + `src/partials/`). CLAUDE.md §7 entsprechend angepasst. |
+| 2026-09-18 | A3 `vercel.json` | **OK** — nur `buildCommand` + `outputDirectory`, sonst nichts. |
