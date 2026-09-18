@@ -4,7 +4,7 @@ Eine Liste, ein Ort. Jede Frage steht mit der Phase, ab der sie blockiert, und
 mit einer Empfehlung, wo Claude eine hat. Erledigte Punkte wandern nach unten
 in „Entschieden", mit Datum und Antwort.
 
-Stand: 2026-09-18 (Phase 5 — Build läuft; Texte bei Willy zur Freigabe)
+Stand: 2026-09-19 (Phase 6 abgeschlossen — Seite steht auf der Review-URL; Texte bei Willy zur Freigabe)
 
 ---
 
@@ -40,7 +40,7 @@ _(keine — alle Phase-0-Fragen sind entschieden)_
 | # | Frage | Empfehlung | Wer |
 |---|---|---|---|
 | D1 | **Impressum / Datenschutz** — alle Firmendaten (Anschrift, HRB, USt-IdNr., Geschäftsführer, Kontakt). | Struktur wird gebaut, Inhalte bleiben `[PLATZHALTER]`, Willy prüft vor Go-live. | Willy |
-| D2 | **Analyse-Tool** + Consent-Ansatz. | Empfehlung mit 2–3 Optionen folgt in Phase 5 (Plausible / Umami / Matomo self-hosted). Nichts wird ohne Freigabe eingebaut. | Willy |
+| D2 | **Analyse-Tool** + Consent-Ansatz. | **Empfehlung liegt vor:** `analytics-tracking.md` — Plausible (oder Umami Cloud), cookielos, ohne Banner; Matomo nur bei eigenem Server. Nichts ist eingebaut (PH-16). | Willy |
 | D3 | **Terminbuchung:** eigenes Calendly-Event oder das von KIBH? | Platzhalter; Frage vor Einbettung. | Willy |
 | D4 | **Kontaktformular:** eigenes Formspree-Formular oder das von KIBH? | Platzhalter; Frage vor Einbettung. | Willy |
 | D5 | **Avenir-Webfont-Lizenz** vorhanden? (Dann wäre Mulish → Avenir ein Ein-Zeilen-Wechsel, auf beiden Seiten.) | Aus KIBH übernommen, weiterhin offen. | Willy |

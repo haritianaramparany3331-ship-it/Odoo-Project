@@ -101,11 +101,25 @@ One block per session. A fresh session should be able to continue from
   14/15) and the deliberate no-image places.
 - `docs/ki-recherche.md` Punkt 4 bullets.
 
+**Phase 4 approved → Phase 5 built, Phase 6 QA, Phase 7 docs (2026-09-18/19)**
+- Build: `assets/css/main.css` (ledger rows, sequences, cards, light CTA
+  band, FAQ, jump bar, form, placeholders, footer, responsive, hero
+  convergence), partials (header+drawer, footer, shared cta-band with
+  per-page wording), 8 pages, `main.js` (drawer, form placeholder notice),
+  `build.js` (front-matter vars, legal draft notice, 2-pass render).
+- QA: `tests/qa.py` — 7 pages × 5 viewports; first run found 7 issues
+  (nav/footer underline from an over-broad selector, hero headline stranding
+  a line, text links + row links < 44px, three compounds breaking mid-word,
+  spacing after cards, inner H1 wrapping); all fixed; final run green.
+  Animation retimed after frame-by-frame capture.
+- Docs: `analytics-tracking.md` (3 options, recommendation, nothing embedded),
+  `ki-recherche.md` (3 highlights + bullets), platzhalter/offene-fragen updated.
+
 **Next**
-- STOP: Hari approves the design concept → Phase 5 build (tokens+CSS → header/
-  footer → Startseite → inner pages → legal → 404 → sitemap/robots), then
-  Phase 6 QA, Phase 7 docs.
+- Push (ask), verify the deployed site on the Vercel URL, then hand over:
+  Willy's text review (content.md) + placeholder answers (platzhalter.md).
+- After answers: fill PH tokens, real images (bildbedarf.md), Calendly/
+  Formspree embeds, analytics if approved, domain → `indexable: true`.
 
 **Blocked**
-- Text approval by Willy (content.md) can run in parallel with the build;
-  PH-03 changes CTA wording later. Design approval (this STOP).
+- Everything in `docs/platzhalter.md` (PH-01 … PH-20) — all Willy/Hari inputs.

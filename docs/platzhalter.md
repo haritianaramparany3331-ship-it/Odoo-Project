@@ -14,7 +14,7 @@ sieht, findet hier, was eingetragen werden muss und von wem.
 
 Status: ⬜ offen · 🟨 Antwort da, noch nicht eingebaut · ✅ eingebaut
 
-Stand: 2026-09-18 (Phase 3)
+Stand: 2026-09-19 (Phase 6 — alle Platzhalter stehen als Tokens im HTML; `node build.js` zählt 76 Platzhalter und 62× `[MARKENNAME]`)
 
 ---
 
@@ -34,7 +34,7 @@ Stand: 2026-09-18 (Phase 3)
 | **PH-10** | Über uns „Zwei Geschäftsfelder" | Gründungs- bzw. Startjahr von KI Beratung Hessen („seit …"). | Willy | ⬜ |
 | **PH-11** | Impressum (alle Felder) | Firmierung, Rechtsform, Anschrift, Vertretungsberechtigte (Geschäftsführer), Kontakt (Telefon, E-Mail), Registergericht + HRB-Nummer, USt-IdNr., inhaltlich Verantwortlicher (§ 18 Abs. 2 MStV), ggf. Berufsrecht. **Rechtliche Prüfung durch Willy vor Go-live.** | Willy | ⬜ |
 | **PH-12** | Datenschutzerklärung (alle Abschnitte) | Verantwortlicher, Hosting-Anbieter (Vercel in der Review-Phase → Endhost), Server-Logs, Kontaktformular (Anbieter PH-06), Terminbuchung (Anbieter PH-05), Analyse-Tool (nur falls PH-16), Rechte der Betroffenen, ggf. Datenschutzbeauftragter. **Rechtliche Prüfung vor Go-live.** | Willy | ⬜ |
-| **PH-13** | Startseite Hero (Bild) | Odoo-Screenshot (z. B. CRM-Pipeline oder Dashboard), Maße in `bildbedarf.md`. Quelle: eigener Screenshot einer Odoo-Demo oder Odoo-Pressematerial (Nutzungsrechte prüfen). | Hari | ⬜ |
+| **PH-13** | Startseite Hero (Bild) | Odoo-Screenshot (z. B. CRM-Pipeline oder Dashboard), Maße in `bildbedarf.md`. Quelle: eigener Screenshot einer Odoo-Demo oder Odoo-Pressematerial (Nutzungsrechte prüfen). Entschieden 2026-09-18: Claude hat den neutralen Rahmen gebaut, Hari tauscht das Bild später ein (`src/pages/index.html`, `.hero__frame`). | Hari | ⬜ |
 | **PH-14** | Startseite „KI-Hebel" · Über uns „KI-Hebel" (Bild) | Ruhiges Motiv, keine Stock-Roboter. Maße in `bildbedarf.md`. | Hari | ⬜ |
 | **PH-15** | Header, Footer, Favicon, `og:image` | Wortmarke/Logo (SVG + PNG), Favicon-Set, Open-Graph-Bild 1200×630. Maße in `bildbedarf.md`. | Willy / Designer | ⬜ |
 | **PH-16** | `base.html` (Head) · Datenschutz | Analyse-Tool — **nur nach Freigabe** (Empfehlung folgt in Phase 5: Plausible / Umami / Matomo). Bis dahin: nichts eingebaut. (= D2) | Willy | ⬜ |
