@@ -65,7 +65,21 @@ _(folgt in Phase 7)_
 
 ## Punkt 4 — Design & Conversion-Optimierung
 
-_(Stichpunkte, folgt)_
+- **Tokens gelesen, nicht geschätzt:** Farben, Schriftgrößen, Abstände, Radien
+  und Schatten wurden aus dem CSS des KIBH-Projekts ausgelesen (mit Zeilenangabe
+  dokumentiert), Kontrastwerte berechnet statt geschätzt — die KIBH-Lehre
+  „Schwarz war Dunkelgrau" wiederholt sich so nicht.
+- **Entwurf gegen den Standard geprüft:** Claude hat zuerst den Entwurf
+  skizziert, den ein generisches Briefing „B2B-IT-Beratung" ergeben hätte, und
+  den eigenen Plan Punkt für Punkt dagegen gehalten (design-konzept.md §8).
+  Ergebnis: Modul-Karten mit Icons → gelinierte Kontoblatt-Zeilen; dunkles
+  CTA-Band → helles Band; Laptop-Mockup → Screenshot als Dokument; geplanter
+  Scroll-Reveal gestrichen.
+- **Gestaltungsidee aus dem Gegenstand:** die Form der Seite (eine Achse,
+  gelinierte Zeilen, Schlüssel und Eintrag) kommt aus dem, was ein ERP ist —
+  ein Kontoblatt —, nicht aus einem Template.
+- **Bildgrößen vorab entschieden:** jedes Bild hat Format, Anzeige- und
+  Asset-Maß in px, bevor es platziert wird (bildbedarf.md) — KIBH-Lehre §16.6.
 
 ## Was überraschend, kaputt oder zeitaufwendig war
 

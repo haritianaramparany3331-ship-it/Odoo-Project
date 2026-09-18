@@ -90,10 +90,22 @@ One block per session. A fresh session should be able to continue from
   modules); GoBD applies to the taxpayer, Odoo provides the means (GoBD export)
   — copy says exactly that, no "GoBD-konform" claim.
 
+**Phase 4 written (same day)**
+- `docs/design-konzept.md`: 6 color roles, type roles, the "Kontoblatt-Zeile"
+  layout principle (ruled rows instead of cards, one left axis), where cards
+  are allowed (2 places), light CTA band, one motion moment (hero convergence),
+  5 principles, self-critique table vs. the generic B2B-IT default with the
+  changes made. Open for Hari: rows-not-cards, light CTA band, animation
+  yes/no, who makes the Odoo screenshot.
+- `docs/bildbedarf.md`: every image with display + asset px sizes (PH-07/08/13/
+  14/15) and the deliberate no-image places.
+- `docs/ki-recherche.md` Punkt 4 bullets.
+
 **Next**
-- STOP: Willy reviews `content.md` (+ PH-03, PH-17–PH-20 decisions). Then
-  Phase 4 (design concept + self-critique), then Phase 5 build.
+- STOP: Hari approves the design concept → Phase 5 build (tokens+CSS → header/
+  footer → Startseite → inner pages → legal → 404 → sitemap/robots), then
+  Phase 6 QA, Phase 7 docs.
 
 **Blocked**
-- Text approval (Willy). PH-03 (Potenzialgespräch details) is the one that
-  changes the most copy.
+- Text approval by Willy (content.md) can run in parallel with the build;
+  PH-03 changes CTA wording later. Design approval (this STOP).
