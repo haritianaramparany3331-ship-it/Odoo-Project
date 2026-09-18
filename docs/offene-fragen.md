@@ -4,7 +4,7 @@ Eine Liste, ein Ort. Jede Frage steht mit der Phase, ab der sie blockiert, und
 mit einer Empfehlung, wo Claude eine hat. Erledigte Punkte wandern nach unten
 in „Entschieden", mit Datum und Antwort.
 
-Stand: 2026-09-18 (Phase 3 — Texte liegen zur Freigabe vor)
+Stand: 2026-09-18 (Phase 5 — Build läuft; Texte bei Willy zur Freigabe)
 
 ---
 
@@ -65,6 +65,7 @@ _(keine — alle Phase-0-Fragen sind entschieden)_
 
 | Datum | Frage | Entscheidung |
 |---|---|---|
+| 2026-09-18 | Design-Konzept (Phase 4) | **Freigegeben:** Kontoblatt-Zeilen statt Karten, helles CTA-Band, Hero-Konvergenz-Animation ja, Odoo-Screenshot (PH-13) als Platzhalter-Rahmen bis Hari ihn liefert. |
 | 2026-09-18 | B1 Referenzen/Über uns | **Eine Seite „Über uns"** mit Referenzen-Anker (Phase 2 freigegeben). |
 | 2026-09-18 | B4 Branchen | **Vier:** Bau & Handwerk · Produktion & Lebensmittelhandwerk · Handel & E-Commerce · Dienstleistung, Beratung & Agenturen (Phase 2 freigegeben). |
 | 2026-09-18 | A1 Shared Components | **Build-Schritt** (`build.js` + `src/partials/`). CLAUDE.md §7 entsprechend angepasst. |

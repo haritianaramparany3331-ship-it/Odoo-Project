@@ -1,10 +1,24 @@
 <header class="site-header">
   <div class="container container--wide site-header__inner">
-    <a class="brand" href="{{root}}" aria-label="{{siteName}} — zur Startseite">
-      <!-- Wordmark placeholder: replaced by the logo once it exists (docs/bildbedarf.md) -->
+    <a class="brand" href="{{root}}" aria-label="{{siteName}} – zur Startseite">
+      <!-- Wordmark as text until the logo exists (PH-15, docs/bildbedarf.md) -->
       <span class="brand__mark">{{siteName}}</span>
     </a>
-    <!-- Navigation and primary CTA follow in Phase 5, once the page structure
-         (Phase 2) is approved. -->
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+      <span class="visually-hidden">Menü öffnen</span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Hauptnavigation">
+      <ul class="nav__list">
+        <li><a class="nav__link" data-nav="leistungen" href="{{root}}leistungen/">Leistungen</a></li>
+        <li><a class="nav__link" data-nav="branchen" href="{{root}}branchen/">Branchen</a></li>
+        <li><a class="nav__link" data-nav="ueber-uns" href="{{root}}ueber-uns/">Über uns</a></li>
+        <li><a class="nav__link" data-nav="kontakt" href="{{root}}kontakt/">Kontakt</a></li>
+      </ul>
+      <a class="btn btn--primary" href="{{root}}kontakt/">Potenzialgespräch vereinbaren</a>
+    </nav>
   </div>
+  <div class="nav-backdrop" hidden></div>
 </header>

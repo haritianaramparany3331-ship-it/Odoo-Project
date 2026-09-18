@@ -1,12 +1,132 @@
 <!--{
-  "title": "[MARKENNAME] — Website im Aufbau",
-  "description": "Digitalisierung und ERP-Systemhaus für Odoo. Die Website befindet sich im Aufbau.",
+  "title": "Odoo-ERP-Partner für den Mittelstand | [MARKENNAME]",
+  "description": "Ein System statt fünf Programme: [MARKENNAME] führt Odoo im Mittelstand ein – komplett oder Modul für Modul. Implementierung, Migration, Schulung und Pflege aus Hessen.",
   "url": "/",
-  "bodyClass": "page-home"
+  "nav": "index",
+  "bodyClass": "page-home",
+  "cta_title": "Wo steht Ihr Unternehmen – und wo könnte es mit einem System stehen?",
+  "cta_text": "Im kostenlosen ERP-Potenzialgespräch klären wir, ob und wie Odoo zu Ihnen passt. <span class='ph'>[PLATZHALTER PH-03: Dauer und Format, z. B. „30 Minuten per Video“]</span> Kein Verkaufsgespräch, keine Verpflichtung.",
+  "cta_secondary": "<a class='text-link' href='{{root}}kontakt/#nachricht'>oder schreiben Sie uns</a>"
 }-->
-<section class="section placeholder">
+<!-- Copy: docs/content.md §2. Placeholders: docs/platzhalter.md. -->
+
+<section class="hero">
   <div class="container">
-    <h1 class="placeholder__title">Website im Aufbau</h1>
-    <p class="lead">{{siteName}} — Digitalisierung und ERP-Systemhaus für Odoo. Diese Seite ist ein Platzhalter, um den Deploy-Pfad zu prüfen.</p>
+    <h1>Ein System statt fünf Programmen und zehn Excel-Listen.</h1>
+    <div class="hero__grid">
+    <div class="hero__text">
+      <p class="hero__lead">{{siteName}} führt Odoo ein, das Open-Source-ERP für den Mittelstand – komplett oder Modul für Modul: CRM, Lager, Buchhaltung, Zeiterfassung, Personal. Implementierung, Migration, Schulung und Pflege aus Hessen.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{root}}kontakt/">Kostenloses ERP-Potenzialgespräch vereinbaren</a>
+        <a class="text-link" href="{{root}}leistungen/">Leistungen ansehen</a>
+      </div>
+    </div>
+    <div class="hero__media" aria-hidden="false">
+      <div class="hero__frame">
+        <div class="ph-img ph-img--16x10" role="img" aria-label="Platzhalter PH-13: Screenshot der Odoo-Oberfläche">[PLATZHALTER PH-13: Odoo-Screenshot – CRM-Pipeline oder Dashboard, 16:10, Demodaten]</div>
+      </div>
+      <!-- The one motion moment (design-konzept.md §7): four island tiles converge into the frame. Desktop only, once, reduced-motion aware. -->
+      <div class="hero__tile hero__tile--1" aria-hidden="true"></div>
+      <div class="hero__tile hero__tile--2" aria-hidden="true"></div>
+      <div class="hero__tile hero__tile--3" aria-hidden="true"></div>
+      <div class="hero__tile hero__tile--4" aria-hidden="true"></div>
+    </div>
+    </div>
   </div>
 </section>
+
+<section class="section section--surface" aria-labelledby="h-situation">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-situation">Kennen Sie das?</h2>
+    </div>
+    <ul class="ledger ledger--plain">
+      <li class="ledger__row"><p class="ledger__entry">Vertrieb, Lager und Buchhaltung arbeiten in verschiedenen Programmen – und keines kennt die Daten des anderen.</p></li>
+      <li class="ledger__row"><p class="ledger__entry">Dieselbe Bestellung wird dreimal erfasst: im Angebot, im Lieferschein, in der Rechnung.</p></li>
+      <li class="ledger__row"><p class="ledger__entry">Wie läuft der Monat? Die Antwort braucht einen Tag – und stimmt am Ende doch nicht ganz.</p></li>
+    </ul>
+    <p class="after-ledger lead">Das ist kein Fleißproblem Ihrer Mitarbeiter. Es ist ein Systemproblem – und lösbar.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-module">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-module">Alles in einem System</h2>
+      <p>Odoo verbindet die Abläufe Ihres Unternehmens in einer Software. Sie starten mit dem Modul, das am meisten drückt.</p>
+    </div>
+    <ul class="ledger">
+      <li class="ledger__row"><h3 class="ledger__key">CRM &amp; Vertrieb</h3><p class="ledger__entry">Vom ersten Kontakt bis zum Auftrag: jeder Lead sichtbar, jeder Schritt nachvollziehbar.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Finanzen &amp; Buchhaltung</h3><p class="ledger__entry">Rechnungen, Zahlungen, offene Posten: Buchhaltung, die aus den Belegen entsteht.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Lager &amp; Einkauf</h3><p class="ledger__entry">Bestände in Echtzeit, Nachbestellung nach Regeln – ohne Zettel, ohne Zuruf.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Zeiterfassung &amp; Projekte</h3><p class="ledger__entry">Stunden erfassen, Projekte planen, abrechnen – aus denselben Daten.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Personal</h3><p class="ledger__entry">Mitarbeiterdaten, Urlaub, Bewerbungen: an einem Ort statt in Ordnern.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Fertigung</h3><p class="ledger__entry">Aufträge, Stücklisten, Arbeitspläne: die Produktion sieht, was verkauft wurde.</p></li>
+    </ul>
+    <p class="after-ledger"><a class="text-link" href="{{root}}leistungen/#module">Alle Leistungen und Module</a></p>
+  </div>
+</section>
+
+<section class="section section--dark" aria-labelledby="h-warum">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-warum">Warum Odoo?</h2>
+      <p>Fünf Gründe, die für den Mittelstand zählen:</p>
+    </div>
+    <ul class="ledger">
+      <li class="ledger__row"><h3 class="ledger__key">Alles in einem System</h3><p class="ledger__entry">CRM, Verkauf, Einkauf, Lager, Buchhaltung und mehr – zentral verbunden.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Open Source und flexibel</h3><p class="ledger__entry">Anpassbar an Ihre Abläufe, offen für KI-Automation.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Eine Datenbasis</h3><p class="ledger__entry">Alle Unternehmensdaten an einem Ort und in Echtzeit verfügbar.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Skalierbar</h3><p class="ledger__entry">Neue Funktionen, Nutzer und Geschäftsbereiche jederzeit ergänzbar – ohne Neustart.</p></li>
+      <li class="ledger__row"><h3 class="ledger__key">Kein Vendor-Lock-in</h3><p class="ledger__entry">Über 20.000 Mitwirkende weltweit, tausende Add-ons, Selfhosting möglich – Ihre Daten und Ihre Kosten bleiben bei Ihnen.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-vorgehen">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-vorgehen">So gehen wir vor</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><p><strong>Potenzialgespräch.</strong> Wir hören zu: Wo hakt es, was soll sich ändern? Kostenlos und unverbindlich.</p></li>
+      <li class="step"><p><strong>Analyse und Konzept.</strong> Wir sehen uns Ihre Abläufe und Systeme an und empfehlen, womit Sie starten – auch wenn es nur ein Modul ist.</p></li>
+      <li class="step"><p><strong>Einführung.</strong> Wir richten Odoo ein, übernehmen Ihre Daten aus Altsystemen und Excel und binden an, was bleibt.</p></li>
+      <li class="step"><p><strong>Schulung.</strong> Ihr Team lernt Odoo an den eigenen Abläufen – nicht an Beispielen aus dem Handbuch.</p></li>
+      <li class="step"><p><strong>Pflege.</strong> Updates, Support, neue Module: Odoo wächst mit, wir bleiben dran.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--surface" aria-labelledby="h-ki">
+  <div class="container split">
+    <div class="split__text">
+      <div class="section-head">
+        <h2 id="h-ki">Der KI-Hebel</h2>
+      </div>
+      <p class="measure">Ein ERP mit sauberer Datenbasis ist die Voraussetzung für KI, die wirklich arbeitet: Eingangsrechnungen prüfen, Dokumente auslesen, Anfragen vorsortieren. Unser Schwestergeschäftsfeld KI Beratung Hessen entwickelt genau solche Automationen – und Odoo ist dafür ein offenes Fundament.</p>
+      <a class="text-link" href="{{root}}ueber-uns/#ki-hebel">Mehr zum KI-Hebel</a>
+    </div>
+    <div class="split__media">
+      <div class="ph-img ph-img--4x3" role="img" aria-label="Platzhalter PH-14: ruhiges Motiv zum KI-Hebel">[PLATZHALTER PH-14: Odoo-Screenshot Eingangsrechnung mit Beleg oder eigenes Foto, 4:3]</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-branchen">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-branchen">Odoo in Ihrer Branche</h2>
+    </div>
+    <ul class="ledger ledger--plain">
+      <li class="ledger__row"><a class="ledger__key" href="{{root}}branchen/#bau">Bau &amp; Handwerk</a></li>
+      <li class="ledger__row"><a class="ledger__key" href="{{root}}branchen/#produktion">Produktion &amp; Lebensmittelhandwerk</a></li>
+      <li class="ledger__row"><a class="ledger__key" href="{{root}}branchen/#handel">Handel &amp; E-Commerce</a></li>
+      <li class="ledger__row"><a class="ledger__key" href="{{root}}branchen/#dienstleistung">Dienstleistung, Beratung &amp; Agenturen</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PH-09 (Vertrauen: Logos/Zitat) is deliberately not built until real content exists — docs/platzhalter.md. -->
+
+{{> cta-band}}

@@ -144,7 +144,16 @@ function build() {
       ? ""
       : '<meta name="robots" content="noindex, nofollow">';
 
+    // Legal pages carry a visible "Entwurf" notice while the site is a review
+    // build; it disappears by itself in the indexable (go-live) build.
+    const draftNotice = meta.legal && !indexable
+      ? '<p class="draft-notice" role="note">Entwurf: Struktur steht, alle Angaben sind Platzhalter und werden vor Go-live geprüft (docs/platzhalter.md, PH-11/PH-12).</p>'
+      : "";
+
+    // Every front-matter key is a template variable, so a shared partial such
+    // as the CTA band can carry per-page wording while existing exactly once.
     const vars = {
+      ...meta,
       title: meta.title || CONFIG.siteName,
       description: meta.description || "",
       url,
@@ -154,12 +163,14 @@ function build() {
       v,
       head_urls: headUrls,
       robots_meta: robotsMeta,
+      draft_notice: draftNotice,
     };
 
     let html = includePartials(partials.base, partials);
     html = html.replace("{{content}}", () => includePartials(body, partials));
     html = markActiveNav(html, meta.nav || slug);
-    html = render(html, vars);
+    // Two passes: a front-matter value may itself contain {{root}}.
+    html = render(render(html, vars), vars);
 
     const dest = path.join(DIST, out);
     fs.mkdirSync(path.dirname(dest), { recursive: true });

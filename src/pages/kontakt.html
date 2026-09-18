@@ -1,0 +1,101 @@
+<!--{
+  "title": "Kostenloses ERP-Potenzialgespräch vereinbaren | [MARKENNAME]",
+  "description": "Termin wählen oder Nachricht schreiben: In einem kostenlosen Potenzialgespräch klären wir, ob und wie Odoo zu Ihren Abläufen passt. Kein Verkaufsgespräch, keine Verpflichtung.",
+  "url": "/kontakt/",
+  "bodyClass": "page-kontakt"
+}-->
+<!-- Copy: docs/content.md §6. Booking (PH-05) and form backend (PH-06) are placeholders — nothing is embedded until approved (CLAUDE.md §11). -->
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Kostenloses ERP-Potenzialgespräch</h1>
+    <p class="lead">Ein Gespräch über Ihre Abläufe, Ihre Systeme und die Frage, ob und wie Odoo zu Ihnen passt. Kein Verkaufsgespräch, keine Verpflichtung. <span class="ph">[PLATZHALTER PH-03: Dauer und Format, z. B. „30 Minuten per Video oder Telefon“]</span></p>
+  </div>
+</section>
+
+<section class="section section--surface" aria-label="Termin oder Nachricht">
+  <div class="container contact-grid">
+    <div id="termin">
+      <h2>Termin wählen</h2>
+      <p>Sie sehen freie Zeiten und wählen, was passt. Die Bestätigung kommt per E-Mail.</p>
+      <div class="ph-img ph-img--4x3" role="img" aria-label="Platzhalter PH-05: Terminbuchung">[PLATZHALTER PH-05: Calendly-Einbettung – eigenes Event oder das von KIBH]</div>
+      <p class="form__note after-ledger">Falls die Terminauswahl nicht lädt: Schreiben Sie uns kurz – wir melden uns mit Terminvorschlägen.</p>
+    </div>
+    <div id="nachricht">
+      <h2>Oder schreiben Sie uns</h2>
+      <form class="form" action="#" method="post" data-placeholder="PH-06" novalidate>
+        <div>
+          <label for="f-name">Name *</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="f-firma">Firma</label>
+          <input id="f-firma" name="firma" type="text" autocomplete="organization">
+        </div>
+        <div>
+          <label for="f-email">E-Mail *</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="f-tel">Telefon (optional)</label>
+          <input id="f-tel" name="telefon" type="tel" autocomplete="tel">
+        </div>
+        <div>
+          <label for="f-anliegen">Ihr Anliegen *</label>
+          <textarea id="f-anliegen" name="anliegen" required></textarea>
+        </div>
+        <div class="form__check">
+          <input id="f-ds" name="datenschutz" type="checkbox" required>
+          <label for="f-ds">Ich habe die <a href="{{root}}datenschutz/">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. *</label>
+        </div>
+        <p class="form__status" role="status" tabindex="-1" hidden></p>
+        <button class="btn btn--primary" type="submit">Nachricht senden</button>
+        <p class="form__note"><span class="ph">[PLATZHALTER PH-06: Formular-Backend – Formspree, eigenes Formular oder das von KIBH]</span></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-weiter">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-weiter">So geht es weiter</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><p><strong>Gespräch.</strong> Sie schildern, wo es hakt; wir fragen nach und ordnen ein.</p></li>
+      <li class="step"><p><strong>Einschätzung.</strong> Sie erhalten <span class="ph">[PLATZHALTER PH-03: was der Kunde bekommt, z. B. „eine kurze schriftliche Einschätzung“]</span> – womit ein Start Sinn ergibt, und womit nicht.</p></li>
+      <li class="step"><p><strong>Entscheidung.</strong> Ob und wie es weitergeht, entscheiden Sie. Ohne Nachfassen im Wochentakt.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--surface section--tight" aria-labelledby="h-kontakt">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-kontakt">Kontakt</h2>
+    </div>
+    <div class="contact-details">
+      <p><span class="ph">[PLATZHALTER PH-04: Anschrift]</span></p>
+      <p><span class="ph">[PLATZHALTER PH-04: Telefon]</span></p>
+      <p><span class="ph">[PLATZHALTER PH-04: E-Mail]</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-kurz">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="h-kurz">Kurz gefragt</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Was sollte ich mitbringen?</summary>
+        <p>Nichts Aufwendiges. Ein Bild Ihrer heutigen Abläufe und Programme reicht – eine Liste der Werkzeuge, die im Einsatz sind, hilft.</p>
+      </details>
+      <details>
+        <summary>Für wen ist das Gespräch gedacht?</summary>
+        <p>Für Geschäftsführung, kaufmännische Leitung und IT-Leitung mittelständischer Unternehmen, die mehrere Systeme durch eines ersetzen wollen – ganz oder Schritt für Schritt.</p>
+      </details>
+    </div>
+  </div>
+</section>
