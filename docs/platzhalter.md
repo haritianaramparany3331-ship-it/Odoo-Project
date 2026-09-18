@@ -37,7 +37,7 @@ Stand: 2026-09-19 (Phase 6 — alle Platzhalter stehen als Tokens im HTML; `node
 | **PH-13** | Startseite Hero (Bild) | Odoo-Screenshot (z. B. CRM-Pipeline oder Dashboard), Maße in `bildbedarf.md`. Quelle: eigener Screenshot einer Odoo-Demo oder Odoo-Pressematerial (Nutzungsrechte prüfen). Entschieden 2026-09-18: Claude hat den neutralen Rahmen gebaut, Hari tauscht das Bild später ein (`src/pages/index.html`, `.hero__frame`). | Hari | ⬜ |
 | **PH-14** | Startseite „KI-Hebel" · Über uns „KI-Hebel" (Bild) | Ruhiges Motiv, keine Stock-Roboter. Maße in `bildbedarf.md`. | Hari | ⬜ |
 | **PH-15** | Header, Footer, Favicon, `og:image` | Wortmarke/Logo (SVG + PNG), Favicon-Set, Open-Graph-Bild 1200×630. Maße in `bildbedarf.md`. | Willy / Designer | ⬜ |
-| **PH-16** | `base.html` (Head) · Datenschutz | Analyse-Tool — **nur nach Freigabe** (Empfehlung folgt in Phase 5: Plausible / Umami / Matomo). Bis dahin: nichts eingebaut. (= D2) | Willy | ⬜ |
+| **PH-16** | `base.html` (Head) · Datenschutz | Analyse-Tool — **nur nach Freigabe**. Empfehlung liegt vor in `analytics-tracking.md` (Plausible, Umami Cloud oder self-hosted Matomo). Bis dahin: nichts eingebaut. (= D2) | Willy | ⬜ |
 
 ## B. Formulierungen, die eine Entscheidung brauchen (kein Token im Text, aber Text ändert sich)
 
