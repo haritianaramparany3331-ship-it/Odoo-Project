@@ -1048,6 +1048,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 4rem); }
   .split,
   .cta-band__inner,
   .contact-grid { grid-template-columns: 1fr; }
+  /* Stacked media must not become a 700px block: same cap as the hero media. */
+  .split__media,
+  .contact-grid .ph-img { max-width: 34rem; }
   .cta-band__actions { justify-content: flex-start; }
   .principles { grid-template-columns: 1fr; gap: var(--sp-6); }
   .branche { grid-template-columns: 1fr; gap: var(--sp-6); }

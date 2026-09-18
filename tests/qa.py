@@ -31,7 +31,7 @@ SHOTS.mkdir(exist_ok=True)
 
 PAGES = ["/", "/leistungen/", "/branchen/", "/ueber-uns/", "/kontakt/", "/impressum/", "/datenschutz/"]
 LIMITS = {"/": 480, "/leistungen/": 600, "/branchen/": 520, "/ueber-uns/": 420, "/kontakt/": 240}
-VIEWPORTS = {"360": (360, 780), "414": (414, 896), "768": (768, 1024), "1024": (1024, 800), "1440": (1440, 900)}
+VIEWPORTS = {"360": (360, 780), "414": (414, 896), "768": (768, 1024), "1024": (1024, 800), "1100": (1100, 800), "1440": (1440, 900)}
 PHONE = {"360", "414"}
 
 problems = []
@@ -197,7 +197,57 @@ with sync_playwright() as p:
                         if not link_cache[key]:
                             problems.append(f"{path}: anchor {href} not found")
 
-            if name in ("360", "1440"):
+            if name == "1440":
+                # document hygiene: duplicate ids, dangling aria-labelledby,
+                # header CTA present, the current page marked in the nav
+                hyg = page.evaluate("""(path) => {
+                  const ids = [...document.querySelectorAll('[id]')].map(e => e.id);
+                  const dup = ids.filter((id, i) => ids.indexOf(id) !== i);
+                  const dangling = [...document.querySelectorAll('[aria-labelledby]')]
+                    .map(e => e.getAttribute('aria-labelledby')).filter(id => !document.getElementById(id));
+                  const cta = !!document.querySelector('.site-header .btn--primary');
+                  const active = document.querySelector('.nav__link.is-active[aria-current=page]');
+                  const activeHref = active ? active.getAttribute('href') : null;
+                  return { dup: [...new Set(dup)], dangling, cta, activeHref };
+                }""", path)
+                if hyg["dup"]:
+                    problems.append(f"{path}: duplicate ids {hyg['dup']}")
+                if hyg["dangling"]:
+                    problems.append(f"{path}: aria-labelledby without target {hyg['dangling']}")
+                if not hyg["cta"]:
+                    problems.append(f"{path}: header CTA missing")
+                if path not in ("/", "/impressum/", "/datenschutz/") and (not hyg["activeHref"] or path.strip("/") not in hyg["activeHref"]):
+                    problems.append(f"{path}: current page not marked in nav (got {hyg['activeHref']})")
+
+                # keyboard: skip link first, then a visible focus ring
+                page.keyboard.press("Tab")
+                first = page.evaluate("document.activeElement.className + '|' + (document.activeElement.getBoundingClientRect().left >= 0)")
+                if not first.startswith("skip-link|true"):
+                    problems.append(f"{path}: first Tab does not reach a visible skip link ({first})")
+                page.keyboard.press("Tab")
+                ring = page.evaluate("(() => { const cs = getComputedStyle(document.activeElement); return cs.outlineStyle + ' ' + cs.outlineWidth + ' ' + cs.outlineColor; })()")
+                if "solid" not in ring or "3px" not in ring:
+                    problems.append(f"{path}: no visible focus ring on second Tab stop ({ring})")
+
+                # FAQ accordion opens and closes
+                if page.locator(".faq details").count():
+                    second = page.locator(".faq details").nth(1)
+                    second.locator("summary").click()
+                    if not second.evaluate("d => d.open"):
+                        problems.append(f"{path}: FAQ item does not open")
+                    second.locator("summary").click()
+                    if second.evaluate("d => d.open"):
+                        problems.append(f"{path}: FAQ item does not close")
+
+                # contact form: submit shows the placeholder notice, nothing navigates
+                if page.locator("form[data-placeholder]").count():
+                    page.locator("form[data-placeholder] button[type=submit]").click()
+                    page.wait_for_timeout(200)
+                    shown = page.evaluate("(() => { const s = document.querySelector('.form__status'); return s && !s.hidden && s.textContent.includes('PH-06'); })()")
+                    if not shown or page.url.rstrip('/') != (BASE + path).rstrip('/'):
+                        problems.append(f"{path}: form submit did not show the placeholder notice in place")
+
+            if name in ("360", "768", "1024", "1440"):
                 page.screenshot(path=str(SHOTS / f"{(path.strip('/').replace('/', '-') or 'home')}-{name}.png"), full_page=True)
 
             # drawer behaviour on phones

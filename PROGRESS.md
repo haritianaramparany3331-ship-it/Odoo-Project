@@ -115,6 +115,17 @@ One block per session. A fresh session should be able to continue from
 - Docs: `analytics-tracking.md` (3 options, recommendation, nothing embedded),
   `ki-recherche.md` (3 highlights + bullets), platzhalter/offene-fragen updated.
 
+**Phase 6 second pass (2026-09-19)**
+- qa.py extended: keyboard (skip link first, 3px focus ring), FAQ open/close,
+  form submit shows placeholder notice in place, header CTA on every page,
+  current page marked in nav, duplicate ids, dangling aria-labelledby, 1100px
+  viewport (desktop nav at its narrowest). Green: 7 pages × 6 viewports.
+- Visual pass at 768/1024 found one named issue: stacked split/contact media
+  grew to ~730px tall at ≤1024 → capped at 34rem like the hero media.
+- Generic-tell audit by grep: no uppercase labels, no arrows in UI text, no
+  monospace, no near-black, gradients only in placeholder markers/tiles, two
+  keyframes (hero only), cards only in the two approved places.
+
 **Next**
 - Push (ask), verify the deployed site on the Vercel URL, then hand over:
   Willy's text review (content.md) + placeholder answers (platzhalter.md).
